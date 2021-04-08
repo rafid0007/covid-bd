@@ -101,7 +101,8 @@ export const RareImpact = () => {
                     // labels: {
                     //   fontColor: "#000080",
                     // }
-                }
+                },
+                maintainAspectRatio: false
             }
 
         setChartData(chartData)
@@ -136,11 +137,11 @@ export const RareImpact = () => {
     return (
         <>
             <div class="box">
-                <h2>
+                {/* <h2>
                 Rare impact on daily cases
-                </h2>
+                </h2> */}
                 <div class="container" style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-                    <Line data={chartData} options={chartOptions} width="800" height="400"/>
+                    <Line data={chartData} options={chartOptions} width={"600"} height={"500"}/>
                 </div>
                 <button onClick={refreshChartData}>Refresh</button>
             </div>

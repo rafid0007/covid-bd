@@ -8,6 +8,7 @@ import { scaleQuantile } from 'd3-scale';
 // import Plot from 'react-plotly.js';
 import createPlotlyComponent from 'react-plotly.js/factory';
 import Plotly from "plotly.js-basic-dist";
+import Button from '@material-ui/core/Button';
 
 const Plot = createPlotlyComponent(Plotly);
 
@@ -50,15 +51,17 @@ export const PlotlyChart = () => {
 
     return (
         <>
-            <div class="box" width="800" height="400">
+            {/* <div class="box" width="800" height="400">
                 <h2>
                     PLotly Scatter plot
-                </h2>
-                <div class="container">
-                    <Plot data={data} layout={layout} />
+                </h2> */}
+                {/* <div class="container"> */}
+                <Plot data={data} layout={layout} />
+                {/* </div> */}
+                <div>
+                    <Button variant="contained" onClick={refreshChartData}>Refresh</Button>
                 </div>
-                <button onClick={refreshChartData}>Refresh</button>
-            </div>
+            {/* </div> */}
         </>
     )
 }
