@@ -117,11 +117,11 @@ export const ObservableImpact = () => {
 
     return (
         <>
-            <div class="box">
+            <div className="box">
                 <h2>
                     Obseravable impact on daily cases
                 </h2>
-                <div class="container" style={{ display: 'flex', alignItems: 'center' }}>
+                <div className="container" style={{ display: 'flex', alignItems: 'center' }}>
                     <Line data={chartData} options={chartOptions} width={600} height={300} />
                 </div>
                 <button onClick={refreshChartData}>Refresh</button>

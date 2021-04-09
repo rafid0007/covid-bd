@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 // library imports
 import Plotly from "plotly.js-basic-dist";
@@ -25,13 +21,11 @@ function App() {
   return (
     <div className="App">
       <TopBar/>
-      <Router>
-        <Switch>
-          <Route exact path='/'>
-            <HomePage/>
-          </Route>
-        </Switch>
-      </Router>
+      <Switch>
+        <Route exact path='/'>
+          <HomePage/>
+        </Route>
+      </Switch>
     </div>
   );
 }

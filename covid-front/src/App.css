@@ -23,12 +23,17 @@ body {
   line-height: 1.6;
   font-size: 1.6rem;
   /* color: #000 */
-  /* background-color: var(--color-grey-light-1); */
+  background-color: #fafafa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+a,a:active,a:visited{
+  text-decoration: none;
+  color: #000;
+}
+
 .rsm-svg {
   width: 70rem;
-  height: 62rem;
+  height: 67rem;
 }

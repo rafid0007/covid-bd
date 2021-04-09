@@ -9,7 +9,7 @@ import styles from './homePage.module.css';
 
 export const HomePage = () => {
     return (
-        <section class={styles.homePage}>
+        <section className={styles.homePage}>
             <div className={styles.options}>Options Bar</div>
 
             <div className={styles.mapContainer}>
@@ -17,10 +17,10 @@ export const HomePage = () => {
             </div>
 
             <div className={styles.chartsContainer}>
-                <div className={styles.orange}>
+                <div className={styles.chart}>
                     <SucceptiblePopulation></SucceptiblePopulation>
                 </div>
-                <div className={styles.orange}>
+                <div className={styles.chart}>
                     <ObservableImpact></ObservableImpact>
                 </div>
             </div>

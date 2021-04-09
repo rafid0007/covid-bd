@@ -2,6 +2,7 @@
   padding: 3rem;
   display: grid;
   /* grid-template-columns: 3fr 2fr; */
+  grid-column-gap: 1rem;
   grid-row-gap: 2rem;
 }
 
@@ -12,8 +13,9 @@
 }
 
 .mapContainer {
-  /* background-color: red; */
-  height: 62rem;
+  /* background-color: #fafafa; */
+  border-radius: .5rem;
+  height: 67rem;
 }
 
 .chartsContainer {
@@ -28,6 +30,8 @@
   grid-column: span 2;
 }
 
-.orange {
-  /* background-color: orange; */
+.chart{
+    /* background-color: #fafafa; */
+    border-radius: .5rem;
+    padding: 1rem;
 }

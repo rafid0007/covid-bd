@@ -96,11 +96,11 @@ export const SucceptiblePopulation = () => {
 
     return (
         <>
-            <div class="box">
+            <div className="box">
                 <h2>
                     Succeptible Population
                 </h2>
-                <div class="container" style={{ display: 'flex', alignItems: 'center' }}>
+                <div className="container" style={{ display: 'flex', alignItems: 'center' }}>
                     <Bar data={chartData} options={chartOptions} width={600} height={300} />
                 </div>
                 <button onClick={refreshChartData}>Refresh</button>

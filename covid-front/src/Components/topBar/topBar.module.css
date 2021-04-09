@@ -2,14 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: grey;
-    padding: .5rem;
+    background-color: #263238;
+    padding: 1rem;
 }
 
 .brand{
     padding: 1rem;
     font-size: 2rem;
     color:#eee;
+    cursor: pointer;
 }
 
 .grow{
@@ -22,8 +23,13 @@
 }
 
 .catItem{
-    background-color: #eee;
+    /* background-color: #eee; */
     padding: 1rem 2rem;
     margin-right: 2rem;
     border-radius: 3px;
+    cursor: pointer;
+}
+
+.catItem a{
+    color: #fafafa !important;
 }
