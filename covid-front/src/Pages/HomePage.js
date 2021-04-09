@@ -5,21 +5,26 @@ import { SucceptiblePopulation } from '../Components/Charts/SucceptiblePopulatio
 import { MapChart } from '../Components/Charts/MapChart';
 import { PlotlyChart } from '../Components/Charts/PlotlyChart' 
 
+import styles from './homePage.module.css';
+
 export const HomePage = () => {
     return (
-        <>
-        <section class="section">
-            <div class="container">
-                <h1 class="title">
-                    COVID-19 in Bangladesh
-                </h1>
-                <RareImpact/>
-                <ObservableImpact/>
-                <SucceptiblePopulation/>
-                <PlotlyChart/>
-                <MapChart/>
+        <section class={styles.homePage}>
+            <div className={styles.options}>Options Bar</div>
+
+            <div className={styles.mapContainer}>
+                 Bd map
             </div>
+        
+            <div className={styles.chartsContainer}>
+                <div className={styles.orange}>chart 1</div>
+                <div className={styles.orange}>chart 2</div>
+            </div>
+
+            <div className={styles.table}>
+                table
+            </div>
+           
         </section>
-        </>
     )
 }

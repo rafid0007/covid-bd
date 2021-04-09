@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Bar, defaults } from 'react-chartjs-2'
 import { merge } from 'lodash';
 import { scaleQuantile } from 'd3-scale';
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+// import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import ReactTooltip from 'react-tooltip';
 import {
     ComposableMap,
@@ -134,7 +134,7 @@ export const MapChart = () => {
     }, [])
 
     return (
-        <>
+        <div>
             {/* <div class="box" width="800" height="400">
                 <h2>
                     Map
@@ -171,7 +171,7 @@ export const MapChart = () => {
                 <Button variant="contained" onClick={getHeatMapData}>Refresh</Button>
             </div>
             {/* </div> */}
-        </>
+        </div>
     )
 }
 

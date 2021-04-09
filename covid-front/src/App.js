@@ -1,18 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import { HomePage } from './Pages/HomePage'
-import { Dashboard } from './Pages/Dashboard'
-// import Plot from 'react-plotly.js';
-import Plotly from "plotly.js-basic-dist";
-import createPlotlyComponent from 'react-plotly.js/factory'
-
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-import React from 'react';
+
+// library imports
+import Plotly from "plotly.js-basic-dist";
+import createPlotlyComponent from 'react-plotly.js/factory';
+// import Plot from 'react-plotly.js';
+
+// custom component imports
+import TopBar from './Components/topBar/topBar';
+import { HomePage } from './Pages/HomePage';
+
+// style imports
+import './App.css';
+
 
 // const Plotly = window.Plotly;
 const Plot = createPlotlyComponent(Plotly);
@@ -20,17 +24,12 @@ const Plot = createPlotlyComponent(Plotly);
 function App() {
   return (
     <div className="App">
+      <TopBar/>
       <Router>
         <Switch>
-
           <Route exact path='/'>
             <HomePage/>
           </Route>
-
-          <Route exact path='/dashboard'>
-            <Dashboard/>
-          </Route>
-
         </Switch>
       </Router>
     </div>
