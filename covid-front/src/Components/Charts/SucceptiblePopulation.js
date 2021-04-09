@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Bar, defaults } from 'react-chartjs-2'
 import { merge } from 'lodash';
 
 merge(defaults, {
-        global: {
-            responsive: false
-        }
+    global: {
+        responsive: false
     }
+}
 );
 
 export const SucceptiblePopulation = () => {
@@ -20,16 +20,16 @@ export const SucceptiblePopulation = () => {
         console.log("checking <SucceptiblePopulation> values", json_data)
 
         var datasets = []
-        for(var i = 0; i<json_data['data'].length; i++){
+        for (var i = 0; i < json_data['data'].length; i++) {
             var data_obj = {
                 'legend': json_data['data'][i]['label'],
-                'data'  : json_data['data'][i]['value'],
-                'label' : json_data['data'][i]['label'],
-                'type'  : 'bar', 
+                'data': json_data['data'][i]['value'],
+                'label': json_data['data'][i]['label'],
+                'type': 'bar',
                 'lineTension': 0,
                 'borderWidth': 1,
-                'backgroundColor': json_data['data'][i]['color'], 
-                'borderColor' : json_data['data'][i]['color'],
+                'backgroundColor': json_data['data'][i]['color'],
+                'borderColor': json_data['data'][i]['color'],
                 'pointBackgroundColor': json_data['data'][i]['color'],
                 'pointRadius': 2,
                 'fill': false,
@@ -41,22 +41,22 @@ export const SucceptiblePopulation = () => {
 
         // console.log(json_data['labels'])
         var chartData = {
-            'labels'    : json_data['labels'],
-            'datasets'  : datasets, 
+            'labels': json_data['labels'],
+            'datasets': datasets,
             // 'lineAtIndex': [1,2,3,4]
         }
         var options = {
             scales: {
-                xAxes:[{
+                xAxes: [{
                     scaleLabel: {
-                      display: true,
-                      labelString: json_data['x_axis']
+                        display: true,
+                        labelString: json_data['x_axis']
                     }
                 }],
-                yAxes:[{
+                yAxes: [{
                     scaleLabel: {
-                      display: true,
-                      labelString: json_data['y_axis']
+                        display: true,
+                        labelString: json_data['y_axis']
                     }
                 }]
             },
@@ -76,7 +76,7 @@ export const SucceptiblePopulation = () => {
     const refreshChartData = () => {
         console.log("refreshing chart data")
         fetch('/api/succeptible_population').then(response => {
-            if(response.ok){
+            if (response.ok) {
                 return response.json()
             }
         }).then(data => {
@@ -84,9 +84,9 @@ export const SucceptiblePopulation = () => {
         })
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch('/api/succeptible_population').then(response => {
-            if(response.ok){
+            if (response.ok) {
                 return response.json()
             }
         }).then(data => {
@@ -100,8 +100,8 @@ export const SucceptiblePopulation = () => {
                 <h2>
                     Succeptible Population
                 </h2>
-                <div class="container" style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-                    <Bar data={chartData} options={chartOptions} width="800" height="400"/>
+                <div class="container" style={{ display: 'flex', alignItems: 'center' }}>
+                    <Bar data={chartData} options={chartOptions} width={600} height={300} />
                 </div>
                 <button onClick={refreshChartData}>Refresh</button>
             </div>

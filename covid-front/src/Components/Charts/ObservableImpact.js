@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Line, defaults } from 'react-chartjs-2'
 import { merge } from 'lodash';
 
 merge(defaults, {
-        global: {
-            responsive: false
-        }
+    global: {
+        responsive: false
     }
+}
 );
 
 export const ObservableImpact = () => {
@@ -31,7 +31,7 @@ export const ObservableImpact = () => {
                 backgroundColor: "rgba(218,83,79, .7)",
                 borderColor: "rgba(218,83,79, .7)",
                 pointRadius: 0
-            }, 
+            },
             {
                 type: 'bubble',
                 label: 'data points',
@@ -49,15 +49,15 @@ export const ObservableImpact = () => {
                     type: 'linear',
                     position: 'bottom',
                     ticks: {
-                    autoSkip: true,
-                    max: Math.max(...labels.array)
+                        autoSkip: true,
+                        max: Math.max(...labels.array)
                     },
                     scaleLabel: {
                         display: true,
                         labelString: observableImpact['x_axis']
                     }
                 }],
-                yAxes:[{
+                yAxes: [{
                     scaleLabel: {
                         display: true,
                         labelString: observableImpact['y_axis']
@@ -77,10 +77,10 @@ export const ObservableImpact = () => {
 
         function makeLabels() {
             var arr = []
-            for(var i = 0; i < observableImpact['point_arr'].length; i++) arr.push(observableImpact['point_arr'][i]['x'])
+            for (var i = 0; i < observableImpact['point_arr'].length; i++) arr.push(observableImpact['point_arr'][i]['x'])
 
             arr = arr.sort((a, b) => a - b);
-            let newarr = arr.map(item => ({ x: item, y: observableImpact['regression_line']['py'] + (item-observableImpact['regression_line']['px'])*observableImpact['regression_line']['slope'] }));
+            let newarr = arr.map(item => ({ x: item, y: observableImpact['regression_line']['py'] + (item - observableImpact['regression_line']['px']) * observableImpact['regression_line']['slope'] }));
             return {
                 labels: newarr,
                 array: arr
@@ -88,7 +88,7 @@ export const ObservableImpact = () => {
         };
 
         function makeBubbles() {
-        return observableImpact['point_arr']
+            return observableImpact['point_arr']
         };
 
 
@@ -97,7 +97,7 @@ export const ObservableImpact = () => {
     const refreshChartData = () => {
         console.log("refreshing chart data")
         fetch('/api/observableimpact').then(response => {
-            if(response.ok){
+            if (response.ok) {
                 return response.json()
             }
         }).then(data => {
@@ -105,9 +105,9 @@ export const ObservableImpact = () => {
         })
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch('/api/observableimpact').then(response => {
-            if(response.ok){
+            if (response.ok) {
                 return response.json()
             }
         }).then(data => {
@@ -121,8 +121,8 @@ export const ObservableImpact = () => {
                 <h2>
                     Obseravable impact on daily cases
                 </h2>
-                <div class="container" style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-                    <Line data={chartData} options={chartOptions} width="800" height="400"/>
+                <div class="container" style={{ display: 'flex', alignItems: 'center' }}>
+                    <Line data={chartData} options={chartOptions} width={600} height={300} />
                 </div>
                 <button onClick={refreshChartData}>Refresh</button>
             </div>

@@ -1,33 +1,33 @@
-.homePage{
-    padding:3rem;
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-gap: 2rem;
+.homePage {
+  padding: 3rem;
+  display: grid;
+  /* grid-template-columns: 3fr 2fr; */
+  grid-row-gap: 2rem;
 }
 
-.options{
-    height: 3rem;
-    background-color: orangered;
-    grid-column: span 2;
+.options {
+  height: 3rem;
+  background-color: orangered;
+  grid-column: span 2;
 }
 
-.mapContainer{
-    background-color:red;
-    height: 60rem;
+.mapContainer {
+  /* background-color: red; */
+  height: 62rem;
 }
 
-.chartsContainer{
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-rows: repeat (2, 1fr);
+.chartsContainer {
+  display: grid;
+  grid-row-gap: 2rem;
+  /* grid-template-rows: repeat (2, 1fr); */
 }
 
-.table{
-    height: 60rem;
-    background-color: purple;
-    grid-column: span 2;
+.table {
+  height: 60rem;
+  background-color: purple;
+  grid-column: span 2;
 }
 
-.orange{
-    background-color: orange;
+.orange {
+  /* background-color: orange; */
 }

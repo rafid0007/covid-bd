@@ -143,8 +143,8 @@ export const MapChart = () => {
             <ComposableMap
                 projectionConfig={PROJECTION_CONFIG}
                 projection="geoMercator"
-                width={10}
-                height={6}
+                width={5}
+                height={3}
                 data-tip=""
             >
                 <Geographies geography={BD_TOPO_JSON}>
