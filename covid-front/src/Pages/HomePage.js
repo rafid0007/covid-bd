@@ -25,12 +25,12 @@ export const HomePage = () => {
             <div className={styles.chartsContainer}>
                 <div className={styles.chart}>
                     {
-                        districtData ? <PlotlyChart></PlotlyChart> : <SucceptiblePopulation></SucceptiblePopulation>
+                        districtData.NAME_3 ? <PlotlyChart></PlotlyChart> : <SucceptiblePopulation></SucceptiblePopulation>
                     }
                 </div>
                 <div className={styles.chart}>
                     {
-                        districtData ? <RareImpact></RareImpact> : <ObservableImpact></ObservableImpact>
+                        districtData.NAME_3 ? <RareImpact></RareImpact> : <ObservableImpact></ObservableImpact>
                     }
                 </div>
             </div>
