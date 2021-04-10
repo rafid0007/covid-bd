@@ -6,6 +6,7 @@ import { MapChart } from '../Components/Charts/MapChart';
 import { PlotlyChart } from '../Components/Charts/PlotlyChart'
 
 import styles from './homePage.module.css';
+import Table from '../Components/Table/Table';
 
 export const HomePage = () => {
     return (
@@ -26,7 +27,7 @@ export const HomePage = () => {
             </div>
 
             <div className={styles.table}>
-                table
+                <Table></Table>
             </div>
 
         </section>

@@ -12,6 +12,7 @@ import { HomePage } from './Pages/HomePage';
 
 // style imports
 import './App.css';
+import AboutPage from './Pages/AboutPage/AboutPage';
 
 
 // const Plotly = window.Plotly;
@@ -20,10 +21,16 @@ const Plot = createPlotlyComponent(Plotly);
 function App() {
   return (
     <div className="App">
-      <TopBar/>
+      <TopBar />
       <Switch>
+        <Route path='/home'>
+          <HomePage />
+        </Route>
+        <Route path='/about'>
+          <AboutPage></AboutPage>
+        </Route>
         <Route exact path='/'>
-          <HomePage/>
+          <HomePage />
         </Route>
       </Switch>
     </div>

@@ -14,7 +14,7 @@
 
 .mapContainer {
   /* background-color: #fafafa; */
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   height: 67rem;
 }
 
@@ -25,13 +25,23 @@
 }
 
 .table {
+  margin: 2rem 30rem;
   height: 60rem;
-  background-color: purple;
+  /* background-color: purple; */
   grid-column: span 2;
 }
+.table tr {
+  display: flex;
+  justify-content: space-between;
+}
 
-.chart{
-    /* background-color: #fafafa; */
-    border-radius: .5rem;
-    padding: 1rem;
+.table td {
+  padding: 1rem;
+  border: none;
+}
+
+.chart {
+  /* background-color: #fafafa; */
+  border-radius: 0.5rem;
+  padding: 1rem;
 }

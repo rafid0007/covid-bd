@@ -22,13 +22,16 @@ body {
   font-weight: 400;
   line-height: 1.6;
   font-size: 1.6rem;
+  overflow-x: hidden;
   /* color: #000 */
   background-color: #fafafa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a,a:active,a:visited{
+a,
+a:active,
+a:visited {
   text-decoration: none;
   color: #000;
 }
