@@ -11,7 +11,7 @@ import {
     Geography,
 } from "react-simple-maps"
 import Button from '@material-ui/core/Button';
-import CachedIcon from '@material-ui/icons/Cached';  // ******added import******
+import CachedIcon from '@material-ui/icons/Cached';  // ******added******
 import { useBetween } from 'use-between';
 
 import LinearGradient from './LinearGradient.js';
