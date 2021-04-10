@@ -141,7 +141,7 @@ export const RareImpact = () => {
                 Rare impact on daily cases
                 </h2> */}
                 <div class="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <Line data={chartData} options={chartOptions} width={"600"} height={"500"} />
+                    <Line data={chartData} options={chartOptions} width={600} height={300} />
                 </div>
                 {/* <button onClick={refreshChartData}>Refresh</button> */}
             </div>

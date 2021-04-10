@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { RareImpact } from '../Components/Charts/RareImpact';
 import { ObservableImpact } from '../Components/Charts/ObservableImpact';
 import { SucceptiblePopulation } from '../Components/Charts/SucceptiblePopulation';
@@ -8,8 +8,10 @@ import { PlotlyChart } from '../Components/Charts/PlotlyChart'
 import styles from './homePage.module.css';
 import Table from '../Components/Table/Table';
 import OptionBar from '../Components/OptionBar/OptionBar';
+import { DistrictDataContext } from '../App';
 
 export const HomePage = () => {
+    const [districtData, setDistrictData] = useContext(DistrictDataContext)
     return (
         <section className={styles.homePage}>
             <div className={styles.options}>
@@ -22,10 +24,14 @@ export const HomePage = () => {
 
             <div className={styles.chartsContainer}>
                 <div className={styles.chart}>
-                    <SucceptiblePopulation></SucceptiblePopulation>
+                    {
+                        districtData ? <PlotlyChart></PlotlyChart> : <SucceptiblePopulation></SucceptiblePopulation>
+                    }
                 </div>
                 <div className={styles.chart}>
-                    <ObservableImpact></ObservableImpact>
+                    {
+                        districtData ? <RareImpact></RareImpact> : <ObservableImpact></ObservableImpact>
+                    }
                 </div>
             </div>
 

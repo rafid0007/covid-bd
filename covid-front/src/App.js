@@ -1,5 +1,5 @@
-import React from 'react';
-import { Switch, Route } from "react-router-dom";
+import React, { createContext, useState } from 'react';
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
 // library imports
 import Plotly from "plotly.js-basic-dist";
@@ -14,26 +14,31 @@ import { HomePage } from './Pages/HomePage';
 import './App.css';
 import AboutPage from './Pages/AboutPage/AboutPage';
 
+export const DistrictDataContext = createContext();
+
 
 // const Plotly = window.Plotly;
 const Plot = createPlotlyComponent(Plotly);
 
 function App() {
+  const [districtData, setDistrictData] = useState({})
   return (
-    <div className="App">
-      <TopBar />
-      <Switch>
-        <Route path='/home'>
-          <HomePage />
-        </Route>
-        <Route path='/about'>
-          <AboutPage></AboutPage>
-        </Route>
-        <Route exact path='/'>
-          <HomePage />
-        </Route>
-      </Switch>
-    </div>
+    <DistrictDataContext.Provider value={[districtData, setDistrictData]}>
+      <Router>
+        <TopBar />
+        <Switch>
+          <Route exact path='/'>
+            <HomePage />
+          </Route>
+          <Route path='/home'>
+            <HomePage />
+          </Route>
+          <Route path='/about'>
+            <AboutPage></AboutPage>
+          </Route>
+        </Switch>
+      </Router>
+    </DistrictDataContext.Provider>
   );
 }
 

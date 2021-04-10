@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import { DistrictDataContext } from '../../App';
 
 const OptionBar = () => {
-  const [district, setDistrict] = useState('Dhaka')
+  const [districtData, setDistrictData] = useContext(DistrictDataContext)
+
+  const handleClick = () => {
+    setDistrictData({})
+  }
+
   return (
     <div>
-      <h2><Link to='/'>Bangladesh </Link>
+      <h2><Link onClick={handleClick} to='/'>Bangladesh </Link>
         {
-          district && <b> <ArrowForwardIosIcon /> {district}</b>
+          districtData.NAME_3 && <b> <ArrowForwardIosIcon /> {districtData.NAME_3}</b>
         }</h2>
     </div>
   );
