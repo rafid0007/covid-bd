@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 const Table = () => {
-  const [tableData, setTableData] = useState([])
+  const [tableData, setTableData] = useState([{date:'12/1/21',confirmedCases:38,recoveredCases:12,deaths:'0',Rt:'2',DT:'1.9'}])
 
-  useEffect(() => {
-    setTableData([])
-  }, [])
+  // useEffect(() => {
+  //   setTableData([])
+  // }, [])
   return (
     <div>
       <table style={{ width: '100%' }}>

@@ -22,9 +22,9 @@ body {
   font-weight: 400;
   line-height: 1.6;
   font-size: 1.6rem;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   /* color: #000 */
-  background-color: #fafafa;
+  background-color: #eeeeee;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -38,7 +38,7 @@ a:visited {
 
 .rsm-svg {
   width: 70rem;
-  height: 67rem;
+  height: 70rem;
 }
 /* svg[Attributes Style] {
   width: 300rem !important;

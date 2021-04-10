@@ -4,7 +4,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import { DistrictDataContext } from '../../App';
 
 const OptionBar = () => {
-  const [districtData, setDistrictData] = useContext(DistrictDataContext)
+  const [districtData, setDistrictData] = useContext(DistrictDataContext);
 
   const handleClick = () => {
     setDistrictData({})

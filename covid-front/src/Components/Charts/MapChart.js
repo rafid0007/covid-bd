@@ -11,10 +11,14 @@ import {
     Geography,
 } from "react-simple-maps"
 import Button from '@material-ui/core/Button';
+import CachedIcon from '@material-ui/icons/Cached';  // ******added import******
 import { useBetween } from 'use-between';
 
 import LinearGradient from './LinearGradient.js';
 import { DistrictDataContext } from '../../App.js';
+
+
+
 
 const geoUrl = "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json"
 
@@ -84,7 +88,7 @@ export const MapChart = () => {
 
     const [tooltipContent, setTooltipContent] = useState('');
     const [heatmap, setHeatMap] = useState([]);
-    const [districtData, setDistrictData] = useContext(DistrictDataContext)
+    const [districtData, setDistrictData] = useContext(DistrictDataContext);
 
     const onMouseLeave = () => {
         // console.log("mouse leaving")
@@ -108,6 +112,7 @@ export const MapChart = () => {
     };
 
     const getHeatMapData = () => {
+        setDistrictData({}); //****** added *******/
         console.log("refreshing heat map data")
         fetch('/api/heat_map').then(response => {
             if (response.ok) {
@@ -138,10 +143,6 @@ export const MapChart = () => {
 
     return (
         <div>
-            {/* <div class="box" width="800" height="400">
-                <h2>
-                    Map
-                </h2> */}
             <ReactTooltip>{tooltipContent}</ReactTooltip>
             <ComposableMap
                 projectionConfig={PROJECTION_CONFIG}
@@ -170,9 +171,16 @@ export const MapChart = () => {
                 </Geographies>
             </ComposableMap>
             {/* <div><LinearGradient data={gradientData} /></div> */}
-            {/* <div>
-                <Button variant="contained" onClick={getHeatMapData}>Refresh</Button>
-            </div> */}
+            
+            <Button 
+            variant="outlined"
+             startIcon={<CachedIcon/>} 
+             onClick={getHeatMapData} 
+             style={{position:'absolute',right:'1rem',top:'1rem'}}
+             >
+                Refresh
+            </Button>
+            
             {/* </div> */}
         </div>
     )

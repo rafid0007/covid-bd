@@ -9,10 +9,10 @@ import createPlotlyComponent from 'react-plotly.js/factory';
 // custom component imports
 import TopBar from './Components/topBar/topBar';
 import { HomePage } from './Pages/HomePage';
+import AboutPage from './Pages/AboutPage/AboutPage';
 
 // style imports
 import './App.css';
-import AboutPage from './Pages/AboutPage/AboutPage';
 
 export const DistrictDataContext = createContext();
 
@@ -21,7 +21,7 @@ export const DistrictDataContext = createContext();
 const Plot = createPlotlyComponent(Plotly);
 
 function App() {
-  const [districtData, setDistrictData] = useState({})
+  const [districtData, setDistrictData] = useState({});
   return (
     <DistrictDataContext.Provider value={[districtData, setDistrictData]}>
       <Router>
