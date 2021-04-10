@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import SearchBar from '../searchBar/searchBar'
+import SearchBar from '../searchBar/searchBar';
 
 import styles from './topBar.module.css';
 

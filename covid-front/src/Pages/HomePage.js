@@ -6,8 +6,8 @@ import { MapChart } from '../Components/Charts/MapChart';
 import { PlotlyChart } from '../Components/Charts/PlotlyChart'
 
 import styles from './homePage.module.css';
-import Table from '../Components/Table/Table';
-import OptionBar from '../Components/OptionBar/OptionBar';
+import Table from '../Components/Design components/Table/Table';
+import OptionBar from '../Components/Design components/OptionBar/OptionBar';
 import { DistrictDataContext } from '../App';
 
 export const HomePage = () => {

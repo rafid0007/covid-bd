@@ -2,7 +2,7 @@ import React,{useContext} from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
-import { DistrictDataContext } from '../../App';
+import { DistrictDataContext } from '../../../App';
 
 
 const CssTextField = withStyles({
@@ -60,6 +60,7 @@ export default function CustomizedInputs() {
             label="Search Districts"
             variant="outlined"
             id="district name"
+            size='small'
           />
         )}
       />

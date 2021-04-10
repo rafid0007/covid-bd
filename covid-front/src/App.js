@@ -7,7 +7,8 @@ import createPlotlyComponent from 'react-plotly.js/factory';
 // import Plot from 'react-plotly.js';
 
 // custom component imports
-import TopBar from './Components/topBar/topBar';
+import TopBar from './Components/Design components/topBar/topBar';
+import Footer from './Components/Design components/footer/footer';
 import { HomePage } from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage/AboutPage';
 
@@ -38,6 +39,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      <Footer/>
     </DistrictDataContext.Provider>
   );
 }
