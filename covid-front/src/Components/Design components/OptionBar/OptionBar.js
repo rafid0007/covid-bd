@@ -11,13 +11,11 @@ const OptionBar = () => {
   }
 
   return (
-    <div>
-      <h2 style={{display:'flex',alignItems:'center'}}>
-        <h3 style={{cursor:'pointer'}} onClick={handleClick}>Bangladesh </h3>
+    <div style={{display:'flex',backgroundColor:'#fff',padding:'1rem',borderRadius:'5px'}}>
+        <h2 style={{cursor:'pointer'}} onClick={handleClick}>Bangladesh </h2>
         {
-          districtData.NAME_3 && <b style={{display:'flex',alignItems:'center'}}> <ArrowForwardIosIcon /> {districtData.NAME_3}</b>
+          districtData.NAME_3 && <h2 style={{display:'flex',alignItems:'center'}}> <ArrowForwardIosIcon /> {districtData.NAME_3}</h2>
         }
-      </h2>
     </div>
   );
 };
