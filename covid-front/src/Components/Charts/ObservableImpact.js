@@ -124,7 +124,7 @@ export const ObservableImpact = () => {
                 <div className="container" style={{ display: 'flex', alignItems: 'center' }}>
                     <Line data={chartData} options={chartOptions} width={600} height={300} />
                 </div>
-                <button onClick={refreshChartData}>Refresh</button>
+                {/* <button onClick={refreshChartData}>Refresh</button> */}
             </div>
         </>
     )

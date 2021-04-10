@@ -7,11 +7,14 @@ import { PlotlyChart } from '../Components/Charts/PlotlyChart'
 
 import styles from './homePage.module.css';
 import Table from '../Components/Table/Table';
+import OptionBar from '../Components/OptionBar/OptionBar';
 
 export const HomePage = () => {
     return (
         <section className={styles.homePage}>
-            <div className={styles.options}>Options Bar</div>
+            <div className={styles.options}>
+                <OptionBar></OptionBar>
+            </div>
 
             <div className={styles.mapContainer}>
                 <MapChart></MapChart>

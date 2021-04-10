@@ -167,9 +167,9 @@ export const MapChart = () => {
                 </Geographies>
             </ComposableMap>
             {/* <div><LinearGradient data={gradientData} /></div> */}
-            <div>
+            {/* <div>
                 <Button variant="contained" onClick={getHeatMapData}>Refresh</Button>
-            </div>
+            </div> */}
             {/* </div> */}
         </div>
     )

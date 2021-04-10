@@ -55,12 +55,12 @@ export const PlotlyChart = () => {
                 <h2>
                     PLotly Scatter plot
                 </h2> */}
-                {/* <div class="container"> */}
-                <Plot data={data} layout={layout} />
-                {/* </div> */}
-                <div>
+            {/* <div class="container"> */}
+            <Plot data={data} layout={layout} />
+            {/* </div> */}
+            {/* <div>
                     <Button variant="contained" onClick={refreshChartData}>Refresh</Button>
-                </div>
+                </div> */}
             {/* </div> */}
         </>
     )
