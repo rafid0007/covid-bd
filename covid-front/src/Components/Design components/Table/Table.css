@@ -1,5 +1,6 @@
 .tableContainer{
   grid-column: span 2;
+  padding: 2rem 0;
 }
 
 table {
