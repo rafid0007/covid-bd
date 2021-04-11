@@ -16,29 +16,13 @@
   background-color: #fff;
   border-radius: 0.5rem;
   height: 75rem;
-  position:relative;
+  position: relative;
 }
 
 .chartsContainer {
   display: grid;
   grid-row-gap: 1rem;
   /* grid-template-rows: repeat (2, 1fr); */
-}
-
-.table {
-  margin: 2rem 30rem;
-  height: 60rem;
-  /* background-color: purple; */
-  grid-column: span 2;
-}
-.table tr {
-  display: flex;
-  justify-content: space-between;
-}
-
-.table td {
-  padding: 1rem;
-  border: none;
 }
 
 .chart {

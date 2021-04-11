@@ -35,7 +35,7 @@ export const HomePage = () => {
                 </div>
             </div>
 
-            <div className={styles.table}>
+            <div>
                 <Table></Table>
             </div>
 
