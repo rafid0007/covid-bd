@@ -1,16 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation} from 'react-router-dom';
 
 import SearchBar from '../searchBar/searchBar';
 
 import styles from './topBar.module.css';
 
 const TopBar = () => {
+
+    const location = useLocation();
+    console.log('location:', location.pathname);
+
     return (
         <div className={styles.topBar}>
-            <div className={styles.brand}>Covid 19 in Bangladesh</div>
+            <Link to='/'><div className={styles.brand}>Covid 19 in Bangladesh</div></Link>
             <div className={styles.grow} />
-            <SearchBar />
+            {
+                location.pathname !== '/about'? <SearchBar />: null
+            }
             <div className={styles.grow} />
             <ul className={styles.cats}>
                 <li className={styles.catItem}><Link to='/home'>Home</Link></li>

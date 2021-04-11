@@ -1,17 +1,18 @@
 .aboutPage {
   margin: 5rem 30rem;
+  min-height: 70vh;
 }
 .aboutPage__card {
   display: flex;
   align-items: center;
-  padding: 3rem;
+  padding: 2rem;
   margin: 2rem;
   background-color: white;
   border-radius: 5px;
 }
 .aboutPage__personImage img {
-  height: 16rem;
-  width: 16rem;
+  height: 10rem;
+  width: 10rem;
   border-radius: 50%;
 }
 .aboutPage__personDetails {

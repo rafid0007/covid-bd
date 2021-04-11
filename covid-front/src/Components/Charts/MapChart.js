@@ -172,14 +172,14 @@ export const MapChart = () => {
             </ComposableMap>
             {/* <div><LinearGradient data={gradientData} /></div> */}
             
-            {/* <Button 
+            <Button 
             variant="outlined"
              startIcon={<CachedIcon/>} 
              onClick={getHeatMapData} 
              style={{position:'absolute',right:'1rem',top:'1rem'}}
              >
                 Refresh
-            </Button> */}
+            </Button>
             
             {/* </div> */}
         </div>

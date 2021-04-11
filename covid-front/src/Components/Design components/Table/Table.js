@@ -9,6 +9,7 @@ const Table = () => {
   // }, [])
   return (
     <div className='tableContainer'>
+      <h1 className>Data Table</h1>
       <table>
         <thead>
           <tr>

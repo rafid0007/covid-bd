@@ -1,14 +1,21 @@
 .tableContainer{
   grid-column: span 2;
   padding: 2rem 0;
+  margin: 4rem 0;
+}
+
+.tableContainer h1{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 table {
   border-radius: 5px;
-  /* margin: 2rem 23rem; */
+  margin: 0 auto;
   background: white;
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
 }
 
 td,

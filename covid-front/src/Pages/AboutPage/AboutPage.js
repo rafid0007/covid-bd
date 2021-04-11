@@ -10,7 +10,7 @@ const AboutPage = () => {
           <img src={personImage} alt="" />
         </div>
         <div className="aboutPage__personDetails">
-          <h1>John Doe</h1>
+          <h2>John Doe</h2>
           <p>Student at Trinity College Dublin</p>
         </div>
       </div>
@@ -19,7 +19,7 @@ const AboutPage = () => {
           <img src={personImage} alt="" />
         </div>
         <div className="aboutPage__personDetails">
-          <h1>John Doe</h1>
+          <h2>John Doe</h2>
           <p>Student at Trinity College Dublin</p>
         </div>
       </div>
