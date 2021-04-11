@@ -14,7 +14,7 @@ const TopBar = () => {
             <div className={styles.grow} />
             <ul className={styles.cats}>
                 <li className={styles.catItem}><Link to='/home'>Home</Link></li>
-                <li className={styles.catItem}><Link to='/about'>About</Link></li>
+                <li className={styles.catItem}><Link to='/about'>About Us</Link></li>
             </ul>
         </div>
     )

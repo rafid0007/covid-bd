@@ -1,0 +1,19 @@
+.aboutPage {
+  margin: 5rem 30rem;
+}
+.aboutPage__card {
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  margin: 2rem;
+  background-color: white;
+  border-radius: 5px;
+}
+.aboutPage__personImage img {
+  height: 16rem;
+  width: 16rem;
+  border-radius: 50%;
+}
+.aboutPage__personDetails {
+  margin: 0 2rem;
+}
