@@ -1,5 +1,10 @@
+.tableContainer{
+  grid-column: span 2;
+}
+
 table {
-  margin: 2rem 23rem;
+  border-radius: 5px;
+  /* margin: 2rem 23rem; */
   background: white;
   border-collapse: collapse;
   width: 100%;

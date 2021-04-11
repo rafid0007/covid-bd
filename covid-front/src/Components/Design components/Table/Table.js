@@ -8,7 +8,7 @@ const Table = () => {
   //   setTableData([])
   // }, [])
   return (
-    <div>
+    <div className='tableContainer'>
       <table>
         <thead>
           <tr>

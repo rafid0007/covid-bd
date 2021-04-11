@@ -22,7 +22,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   font-size: 1.6rem;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   /* color: #000 */
   background-color: #eeeeee;
   -webkit-font-smoothing: antialiased;

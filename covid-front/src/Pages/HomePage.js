@@ -13,7 +13,8 @@ import { DistrictDataContext } from '../App';
 export const HomePage = () => {
     const [districtData, setDistrictData] = useContext(DistrictDataContext)
     return (
-        <section className={styles.homePage}>
+        <section>
+        <div className={styles.homePage}>
             <div className={styles.options}>
                 <OptionBar></OptionBar>
             </div>
@@ -34,11 +35,11 @@ export const HomePage = () => {
                     }
                 </div>
             </div>
-
-            <div>
-                <Table></Table>
-            </div>
-
+            <Table/>
+        </div>
+        <div>
+            
+        </div>
         </section>
     )
 }
