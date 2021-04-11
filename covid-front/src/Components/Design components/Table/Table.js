@@ -9,7 +9,7 @@ const Table = () => {
   // }, [])
   return (
     <div className='tableContainer'>
-      <h1 className>Data Table</h1>
+      <h1>Data Table</h1>
       <table>
         <thead>
           <tr>
@@ -23,8 +23,8 @@ const Table = () => {
         </thead>
         <tbody>
           {
-            tableData.map(rowData => (
-              <tr>
+            tableData.map((rowData, i) => (
+              <tr key={i}>
                 <td>{rowData.date}</td>
                 <td>{rowData.confirmedCases}</td>
                 <td>{rowData.recoveredCases}</td>

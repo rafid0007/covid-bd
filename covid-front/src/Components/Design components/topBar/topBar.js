@@ -8,7 +8,6 @@ import styles from './topBar.module.css';
 const TopBar = () => {
 
     const location = useLocation();
-    console.log('location:', location.pathname);
 
     return (
         <div className={styles.topBar}>
